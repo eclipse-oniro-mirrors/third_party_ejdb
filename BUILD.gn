@@ -138,4 +138,3 @@ ohos_shared_library("ejdb") {
   part_name = "hiview"
   subsystem_name = "hiviewdfx"
 }
-
