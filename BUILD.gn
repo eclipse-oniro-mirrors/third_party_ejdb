@@ -52,6 +52,17 @@ action("copy_iowow_header") {
   ]
 }
 
+config("ejdb_public_config") {
+  include_dirs = [
+    "src",
+    "src/jbi",
+    "src/jbl",
+    "src/jql",
+    "src/util",
+    "$target_gen_dir",
+  ]
+}
+
 config("ejdb_config") {
   include_dirs = [
     "src",
@@ -98,7 +109,7 @@ config("ejdb_config") {
 ohos_shared_library("ejdb") {
   configs = [ ":ejdb_config" ]
 
-  public_configs = [ ":ejdb_config" ]
+  public_configs = [ ":ejdb_public_config" ]
 
   sources = [
     "src/ejdb2.c",
